@@ -4,92 +4,88 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  z-index: 1;
 }
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
-
 .oval-container {
-    position: relative;
-    background-color: #2D81E1;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-top: 0; /* Устанавливаем маргин на ноль */
-    width: 100px;
-    align-content: center;
+  background-color: #2D81E1;
+  border-radius: 20px;
+  width: 100px;
+  align-items: center;
+  margin-top: -50px;
 }
-
+.oval-container2 {
+  background-color: #2D81E1;
+  border-radius: 20px;
+  width: 100px;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: -30px;
+}
 .title {
   color: white;
   text-align: center;
   font-size: 20px;
 }
 .title2 {
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    position: relative; /* добавляем относительное позиционирование */
-    top: 50%;
-    transform: translateY(-50%); /* сдвигаем элемент на половину его высоты наверх */
-    background-color: #2D81E1; /* цвет фона */
-    padding: 10px 20px; /* отступы */
-    border-radius: 20px; /* радиус скругления */
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }
-
 .home-panel {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
 .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 100px;
 }
-
-
 .image {
-  width: 250px; /* Увеличиваем размер изображений */
-  height: 250px;
-  margin-bottom: 10px; /* Добавляем отступ между изображениями и текстом */
-  clip-path: circle(63% at center); /* Создаем круглую область с радиусом 50% */
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
 }
-.image:hover{
-  width: 270px; /* Увеличиваем размер изображений */
-  height: 270px;
+.button-menu-container {
+  align-self: flex-start;
 }
-
+.button-menu {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
 .image-text {
   text-align: center;
+  font-size: 16px;
 }
-
 .template-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #C2D6E4;
   align-items: center;
+  border-radius: 20px;
   height: 100%;
   width: 100%;
-
 }
-
 .template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
 }
-
 .template-image {
-  clip-path: circle(65% at center);
+  width: 260px;
+  height: 290px;
 }
-
 .template-text {
+  font-size: 16px;
   margin-top: 10px;
   text-align: center;
 }
