@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import {Panel,PanelHeader,Header,Button,Group,Cell,Div,NavIdProps,Text,} from '@vkontakte/vkui';
+
 import { UserInfo } from '@vkontakte/vk-bridge';
 import FrameImage from '../assets/frames.svg';
 import CollageImage from '../assets/collage.svg';
@@ -7,14 +8,13 @@ import NewYear from '../assets/newYear.svg';
 import HappyBirthday from '../assets/happyBirthday.svg';
 import March from '../assets/march.svg';
 import Halloween from '../assets/halloween.svg';
-import ButtonMenu from '../assets/buttonMenu.svg';
 import './style.css';
 
 export interface HomeProps extends NavIdProps {
   fetchedUser?: UserInfo;
 }
 
-export const Home: FC<HomeProps> = ({ id, fetchedUser }) => {
+ const Home: FC<HomeProps> = ({ id, fetchedUser }) => {
   
   return (
     <Panel id={id}>    
@@ -68,3 +68,5 @@ export const Home: FC<HomeProps> = ({ id, fetchedUser }) => {
 </Panel>    
   );
 };
+
+export default Home
