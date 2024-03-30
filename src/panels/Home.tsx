@@ -8,6 +8,7 @@ import NewYear from '../assets/newYear.svg';
 import HappyBirthday from '../assets/happyBirthday.svg';
 import March from '../assets/march.svg';
 import Halloween from '../assets/halloween.svg';
+import ButtonMenu from '../assets/buttonMenu.svg';
 import './style.css';
 
 export interface HomeProps extends NavIdProps {
