@@ -4,14 +4,13 @@ import { AdaptivityProvider, ConfigProvider, AppRoot } from '@vkontakte/vkui';
 import { RouterProvider } from '@vkontakte/vk-mini-apps-router';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import { transformVKBridgeAdaptivity } from './utils';
 import { router } from './routes';
 import { App } from './App';
 
 export const AppConfig = () => {
   const vkBridgeAppearance = useAppearance() || undefined;
   const vkBridgeInsets = useInsets() || undefined;
-  const adaptivity = transformVKBridgeAdaptivity(useAdaptivity());
+  const adaptivity = (useAdaptivity());
   const { vk_platform } = parseURLSearchParamsForGetLaunchParams(window.location.search);
 
   return (
