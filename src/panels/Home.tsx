@@ -10,8 +10,6 @@ interface HomeProps {
   id: string
 }
 
-
-
 const Home: FC<HomeProps> = ({id}) => {
   return (
     <Panel id={id}>
