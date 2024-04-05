@@ -14,7 +14,6 @@ const Home: FC<HomeProps> = ({id}) => {
   return (
     <Panel id={id}>
       <div className="home-container">
-      <button onClick={() => setActivePanel(PANELS.COLLAGE)}>наша раша</button>
         <HomeCollage title="Collages" url/>
         <HomeTemplates/>
       </div>

@@ -115,3 +115,23 @@
   margin-top: 10px;
   text-align: center;
 }
+
+
+
+.collage-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collage-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #C2D6E4;
+  align-self: flex-start;
+}
+.collage-img{
+  height: 129px;
+  width: 140px;
+}
