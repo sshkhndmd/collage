@@ -20,7 +20,7 @@ const Collage = ({ id }: CollageProps) => {
   return (
     <Panel id={id}>
       <div style={{ height: "100vh", backgroundColor: "#C2D6E4" }}>
-        <Div className="collage-header">
+        <Div className="collage-header" style={{backgroundColor: 'white'}}>
           <Div className="button-menu-container">
             <a data-to="">
               <img
@@ -34,7 +34,7 @@ const Collage = ({ id }: CollageProps) => {
             <Text className="title">Коллаж</Text>
           </Div>
         </Div>
-        <Div className="collage-content">
+        <Div className="collage-content" style={{height: 'auto'}}>
           <a>
             <div
               className="collage-img"
