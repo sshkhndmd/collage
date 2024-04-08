@@ -1,4 +1,4 @@
-import { Panel, Div, Text } from "@vkontakte/vkui"
+import { Panel, Div, Text } from "@vkontakte/vkui";
 import { setActivePanel } from "../store/panel";
 import { PANELS } from "../types/panels";
 import ButtonBack from "../assets/buttonBack.svg";
@@ -13,27 +13,78 @@ import Collage8 from "../assets/collage8.svg";
 import "./style.css";
 
 interface CollageProps {
-    id: string
-  }
+  id: string;
+}
 
-const Collage = ({id}:CollageProps) => {
+const Collage = ({ id }: CollageProps) => {
   return (
     <Panel id={id}>
-      <Div className="collage-header"> 
-        <Div className="button-menu-container">
-          <a data-to="">
-            <img onClick={() => setActivePanel(PANELS.HOME)} style={{height: '28px', width: '20px'}} src={ButtonBack}></img>
+      <div style={{ height: "100vh", backgroundColor: "#C2D6E4" }}>
+        <Div className="collage-header">
+          <Div className="button-menu-container">
+            <a data-to="">
+              <img
+                onClick={() => setActivePanel(PANELS.HOME)}
+                style={{ height: "28px", width: "20px" }}
+                src={ButtonBack}
+              ></img>
+            </a>
+          </Div>
+          <Div className="oval-container">
+            <Text className="title">Коллаж</Text>
+          </Div>
+        </Div>
+        <Div className="collage-content">
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
           </a>
-        </Div>
-        <Div className="oval-container">
-              <Text className="title">Коллаж</Text>
-        </Div>
-      </Div>
-      <Div className="collage-content">
-        <a>
-          <img className="collage-img" src={Collage1}></img>
-        </a>
-        <a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+          <a>
+            <div
+              className="collage-img"
+              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+            ></div>
+          </a>
+
+          {/* <a>
           <img className="collage-img" src={Collage2}></img>
         </a>
         <a>
@@ -53,10 +104,11 @@ const Collage = ({id}:CollageProps) => {
         </a>
         <a>
           <img className="collage-img" src={Collage8}></img>
-        </a>
-      </Div>
+        </a> */}
+        </Div>
+      </div>
     </Panel>
-  )
-}
+  );
+};
 
 export default Collage;
