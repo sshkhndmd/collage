@@ -44,43 +44,43 @@ const Collage = ({ id }: CollageProps) => {
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage2}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage3}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage4}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage5}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage6}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage7}) no-repeat` }}
             ></div>
           </a>
           <a>
             <div
               className="collage-img"
-              style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}
+              style={{ background: `0 0 / contain url(${Collage8}) no-repeat` }}
             ></div>
           </a>
 
