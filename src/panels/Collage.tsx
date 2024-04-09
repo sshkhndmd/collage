@@ -83,28 +83,6 @@ const Collage = ({ id }: CollageProps) => {
               style={{ background: `0 0 / contain url(${Collage8}) no-repeat` }}
             ></div>
           </a>
-
-          {/* <a>
-          <img className="collage-img" src={Collage2}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage3}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage4}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage5}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage6}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage7}></img>
-        </a>
-        <a>
-          <img className="collage-img" src={Collage8}></img>
-        </a> */}
         </Div>
       </div>
     </Panel>

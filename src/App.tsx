@@ -6,6 +6,7 @@ import { useUnit } from 'effector-react';
 import { $activePanel } from './store/panel';
 import { PANELS } from './types/panels';
 import Archive from './panels/Archive';
+import SelectedCollage from './panels/SelectedCollage';
 
 export const App = () => {
   // const [fetchedUser] = useState<UserInfo | undefined>();
@@ -20,6 +21,7 @@ export const App = () => {
             <Collage id="collage"/>
             <Borders id="borders"/>
             <Archive id="archive"/>
+            <SelectedCollage id="selectedCollage"/>
           </View>
         </SplitCol>
       </SplitLayout>

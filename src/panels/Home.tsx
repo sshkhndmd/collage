@@ -3,8 +3,6 @@ import { Panel} from "@vkontakte/vkui";
 import "./style.css";
 import HomeCollage from "../components/home-collage";
 import HomeTemplates from "../components/home-templates";
-import { setActivePanel } from "../store/panel";
-import { PANELS } from "../types/panels";
 
 interface HomeProps {
   id: string
