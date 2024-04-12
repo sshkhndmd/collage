@@ -7,6 +7,7 @@ import { $activePanel } from './store/panel';
 import { PANELS } from './types/panels';
 import Archive from './panels/Archive';
 import SelectedCollage from './panels/SelectedCollage';
+import SaveCollage from './panels/SaveCollage';
 
 export const App = () => {
   // const [fetchedUser] = useState<UserInfo | undefined>();
@@ -22,6 +23,7 @@ export const App = () => {
             <Borders id="borders"/>
             <Archive id="archive"/>
             <SelectedCollage id="selectedCollage"/>
+            <SaveCollage id="saveCollage"/>
           </View>
         </SplitCol>
       </SplitLayout>

@@ -22,7 +22,7 @@ const SelectedCollage = ({ id }: SelectedCollageProps) => {
           </a>
         </Div>
         <Div className="button-save">
-          <Button>Сохранить</Button>
+          <Button onClick={() => setActivePanel(PANELS.SAVECOLLAGE)}>Сохранить</Button>
         </Div>
       </Div>
     </Panel>
