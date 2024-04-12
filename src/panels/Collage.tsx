@@ -35,7 +35,7 @@ const Collage = ({ id }: CollageProps) => {
           </Div>
         </Div>
         <Div className="collage-content" style={{height: 'auto'}}>
-          <a>
+          <a onClick={() => setActivePanel(PANELS.SELECTEDCOLLAGE)}>
             <div
               className="collage-img"
               style={{ background: `0 0 / contain url(${Collage1}) no-repeat` }}

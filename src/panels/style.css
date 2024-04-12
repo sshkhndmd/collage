@@ -58,6 +58,11 @@
   margin-top: 20px;
 }
 
+.wrapper-home{
+  display: flex;
+  gap: 150px;
+}
+
 .image-container {
   display: flex;
   flex-direction: column;
@@ -73,6 +78,8 @@
 }
 
 .button-menu-container {
+  display: flex;
+  justify-content: space-between;
   align-self: flex-start;
 }
 
@@ -140,4 +147,13 @@
   height: 0;
   width: 100%;
   padding-top: 100%;
+}
+
+.collage-header-set {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-save{
+  margin-bottom: 40px;
 }
