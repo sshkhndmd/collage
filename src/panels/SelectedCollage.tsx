@@ -3,12 +3,20 @@ import ButtonBack from "../assets/buttonBack.svg";
 import "./style.css";
 import { setActivePanel } from "../store/panel";
 import { PANELS } from "../types/panels";
+import { useUnit } from "effector-react";
+import { $idActiveCollage } from "../store/collage";
+import { useState } from "react";
+import { collageTemplates } from "../constants/collageTemplates";
 
 interface SelectedCollageProps {
   id: string;
 }
 
 const SelectedCollage = ({ id }: SelectedCollageProps) => {
+  const idCollage = useUnit($idActiveCollage);
+  const [collage, setCollage] = useState(
+    collageTemplates.find((el) => el.id === idCollage)
+  );
   return (
     <Panel id={id}>
       <Div className="collage-header-set">
@@ -22,8 +30,14 @@ const SelectedCollage = ({ id }: SelectedCollageProps) => {
           </a>
         </Div>
         <Div className="button-save">
-          <Button onClick={() => setActivePanel(PANELS.SAVECOLLAGE)}>Сохранить</Button>
+          <Button onClick={() => setActivePanel(PANELS.SAVECOLLAGE)}>
+            Сохранить
+          </Button>
         </Div>
+      </Div>
+      <Div>
+
+        <img src={collage?.url} />
       </Div>
     </Panel>
   );
