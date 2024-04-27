@@ -1,4 +1,4 @@
-import { Div, Text } from "@vkontakte/vkui";
+import {AppearanceProvider, Div, Text } from "@vkontakte/vkui";
 import FrameImage from "../assets/frames.svg";
 import CollageImage from "../assets/collage.svg";
 import ButtonMenu from "../assets/buttonMenu.svg";
@@ -33,7 +33,9 @@ const HomeCollage = ({ title, url }: HomeCollageProps) => (
             src={FrameImage}
             alt="Frame"
           />
-          <Text className="image-text">Рамки</Text>
+          <AppearanceProvider value="dark">
+            <Text className="image-text">Рамки</Text>
+          </AppearanceProvider>
         </Div>
         <Div className="image-container">
           <img

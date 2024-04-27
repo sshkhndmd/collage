@@ -1,4 +1,4 @@
-import { Div, Text } from "@vkontakte/vkui";
+import { AppearanceProvider, Div, Text } from "@vkontakte/vkui";
 import NewYear from "../assets/newYear.svg";
 import HappyBirthday from "../assets/happyBirthday.svg";
 import March from "../assets/march.svg";
@@ -32,8 +32,14 @@ const HomeTemplates = () => {
       {templates.map((template, index) => {
         return (
           <Div key={index} className="template">
-            <Text className="template-text">{template.title}</Text>
-            <img className="template-image" src={template.url} alt="Template 4" />
+            <AppearanceProvider value="dark">
+              <Text className="template-text">{template.title}</Text>
+            </AppearanceProvider>
+            <img
+              className="template-image"
+              src={template.url}
+              alt="Template 4"
+            />
           </Div>
         );
       })}

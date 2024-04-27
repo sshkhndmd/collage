@@ -115,8 +115,8 @@
 }
 
 .template-image {
-  width: 170px;
-  height: 159px;
+  width: 150px;
+  height: 139px;
 }
 
 .template-text {
@@ -156,4 +156,16 @@
 
 .button-save{
   margin-bottom: 40px;
+}
+
+.image-text{
+  color: black;
+}
+
+.title2{
+  color: white;
+}
+
+.template-text{
+  color: black;
 }
