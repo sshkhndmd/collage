@@ -8,6 +8,7 @@ import { PANELS } from './types/panels';
 import Archive from './panels/Archive';
 import SelectedCollage from './panels/SelectedCollage';
 import SaveCollage from './panels/SaveCollage';
+import SelectedBorder from './panels/SelectedBorder';
 
 export const App = () => {
   // const [fetchedUser] = useState<UserInfo | undefined>();
@@ -23,6 +24,7 @@ export const App = () => {
             <Borders id="borders"/>
             <Archive id="archive"/>
             <SelectedCollage id="selectedCollage"/>
+            <SelectedBorder id="selectedBorder"/>
             <SaveCollage id="saveCollage"/>
           </View>
         </SplitCol>

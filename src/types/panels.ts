@@ -4,6 +4,7 @@ export enum PANELS{
     BORDERS = 'borders',
     ARCHIVE = 'archive',
     SELECTEDCOLLAGE = 'selectedCollage',
+    SELECTEDBORDER = 'selectedBorder',
     SAVECOLLAGE = 'saveCollage'
 
 }

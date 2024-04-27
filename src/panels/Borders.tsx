@@ -2,15 +2,9 @@ import { Div, Panel, Text } from "@vkontakte/vkui";
 import { setActivePanel } from "../store/panel";
 import { PANELS } from "../types/panels";
 import ButtonBack from "../assets/buttonBack.svg";
-import Border1 from "../assets/Border1.svg";
-import Border2 from "../assets/Border2.svg";
-import Border3 from "../assets/Border3.svg";
-import Border4 from "../assets/Border4.svg";
-import Border5 from "../assets/Border5.svg";
-import Border6 from "../assets/Border6.svg";
-import Border7 from "../assets/Border7.svg";
-import Border8 from "../assets/Border8.svg";
-import "./style.css"
+import "./style.css";
+import { borderTemplates } from "../constants/borderTemplates";
+import { setIdActiveBorder } from "../store/border";
 interface BordersProps {
   id: string
 }
@@ -32,55 +26,25 @@ const Borders = ({ id }: BordersProps) => {
             <Text className="title">Рамки</Text>
           </Div>
         </Div>
-        <Div className="collage-content" style={{height: 'auto'}}>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border1}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border2}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border3}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border4}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border5}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border6}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border7}) no-repeat` }}
-            ></div>
-          </a>
-          <a>
-            <div
-              className="collage-img"
-              style={{ background: `0 0 / contain url(${Border8}) no-repeat` }}
-            ></div>
-          </a>
+        <Div className="collage-content" style={{ height: "auto" }}>
+          {borderTemplates.map((template) => {
+            return (
+              <a
+                key={template.id}
+                onClick={() => {
+                  setActivePanel(PANELS.SELECTEDBORDER);
+                  setIdActiveBorder(template.id)
+                }}
+              >
+                <div
+                  className="collage-img"
+                  style={{
+                    background: `0 0 / contain url(${template.url}) no-repeat`,
+                  }}
+                ></div>
+              </a>
+            );
+          })}
         </Div>
       </div>
     </Panel>
