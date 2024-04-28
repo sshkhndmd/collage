@@ -72,8 +72,8 @@
 }
 
 .image {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   margin-bottom: 10px;
 }
 
@@ -151,6 +151,7 @@
 
 .collage-header-set {
   display: flex;
+  background-color: #C2D6E4 ;
   justify-content: space-between;
 }
 
@@ -168,4 +169,14 @@
 
 .template-text{
   color: black;
+}
+
+.border-main{
+  background-color: #C2D6E4;
+  height: 100vh;
+}
+
+.border-image{
+  display: flex;
+  
 }

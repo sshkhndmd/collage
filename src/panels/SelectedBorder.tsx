@@ -1,20 +1,20 @@
 import { useState } from "react";
-import { Button, Div, Panel } from "@vkontakte/vkui"; 
-import ButtonBack from "../assets/buttonBack.svg"; 
-import "./style.css"; 
-import { setActivePanel } from "../store/panel"; 
-import { PANELS } from "../types/panels"; 
-import { useUnit } from "effector-react"; 
-import { $idActiveBorder } from "../store/border"; 
-import { borderTemplates } from '../constants/borderTemplates'; 
+import { Button, Div, Panel } from "@vkontakte/vkui";
+import ButtonBack from "../assets/buttonBack.svg";
+import "./style.css";
+import { setActivePanel } from "../store/panel";
+import { PANELS } from "../types/panels";
+import { useUnit } from "effector-react";
+import { $idActiveBorder } from "../store/border";
+import { borderTemplates } from "../constants/borderTemplates";
 
-interface SelectedBorderProps { 
-  id: string; 
-} 
+interface SelectedBorderProps {
+  id: string;
+}
 
-const SelectedBorder = ({ id }: SelectedBorderProps) => { 
-  const idBorder = useUnit($idActiveBorder); 
-  const border = borderTemplates.find((el) => el.id === idBorder); 
+const SelectedBorder = ({ id }: SelectedBorderProps) => {
+  const idBorder = useUnit($idActiveBorder);
+  const border = borderTemplates.find((el) => el.id === idBorder);
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -34,7 +34,7 @@ const SelectedBorder = ({ id }: SelectedBorderProps) => {
         };
         input.click();
       });
-      
+
       setSelectedImage(URL.createObjectURL(selectedFile));
     } catch (error) {
       console.error("Ошибка при выборе изображения:", error);
@@ -70,30 +70,36 @@ const SelectedBorder = ({ id }: SelectedBorderProps) => {
     }
   };
 
-  return ( 
-    <Panel id={id}> 
-      <Div className="collage-header-set"> 
-        <Div className="button-menu-container"> 
-          <a data-to=""> 
-            <img 
-              onClick={() => setActivePanel(PANELS.BORDERS)} 
-              className="button-menu" 
-              src={ButtonBack} 
-            /> 
-          </a> 
-        </Div> 
-        <Div className="button-save"> 
-          <Button onClick={handleSaveCollage}> 
-            Сохранить 
-          </Button> 
-        </Div> 
-      </Div> 
-      <Div style={{display: 'grid', gap: 5, ...border?.code.reduce((acc, cur) => ({...acc, ...cur}), {})}}> 
-        <img src={border?.url} onClick={handleImageSelect} /> 
-        {selectedImage && <img src={selectedImage} />} 
-      </Div> 
-    </Panel> 
-  ); 
-}; 
+  return (
+    <Panel id={id}>
+      <Div className="border-main">
+        <Div className="collage-header-set">
+          <Div className="button-menu-container">
+            <a data-to="">
+              <img
+                onClick={() => setActivePanel(PANELS.BORDERS)}
+                className="button-menu"
+                src={ButtonBack}
+              />
+            </a>
+          </Div>
+          <Div className="button-save">
+            <Button onClick={handleSaveCollage}>Сохранить</Button>
+          </Div>
+        </Div>
+        <Div
+          style={{
+            display: "grid",
+            gap: 5,
+            ...border?.code.reduce((acc, cur) => ({ ...acc, ...cur }), {}),
+          }}
+        >
+          <img className="border-image" src={border?.url} onClick={handleImageSelect} />
+          {selectedImage && <img src={selectedImage} />}
+        </Div>
+      </Div>
+    </Panel>
+  );
+};
 
 export default SelectedBorder;

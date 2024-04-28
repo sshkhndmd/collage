@@ -37,7 +37,7 @@ const HomeCollage = ({ title, url }: HomeCollageProps) => (
             <Text className="image-text">Рамки</Text>
           </AppearanceProvider>
         </Div>
-        <Div className="image-container">
+        {/* <Div className="image-container">
           <img
             onClick={() => setActivePanel(PANELS.COLLAGE)}
             className="image"
@@ -45,7 +45,7 @@ const HomeCollage = ({ title, url }: HomeCollageProps) => (
             alt="Collage"
           />
           <Text className="image-text">Коллажи</Text>
-        </Div>
+        </Div> */}
       </div>
     </Div>
   </Div>
