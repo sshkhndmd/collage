@@ -87,13 +87,9 @@ const SelectedBorder = ({ id }: SelectedBorderProps) => {
             <Button onClick={handleSaveCollage}>Сохранить</Button>
           </Div>
         </Div>
-        <Div
-          style={{
-            display: "grid",
-            gap: 5,
-            ...border?.code.reduce((acc, cur) => ({ ...acc, ...cur }), {}),
-          }}
-        >
+        
+        <Div>
+
           <img className="border-image" src={border?.url} onClick={handleImageSelect} />
           {selectedImage && <img src={selectedImage} />}
         </Div>
