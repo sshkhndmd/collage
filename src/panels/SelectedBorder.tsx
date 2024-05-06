@@ -7,14 +7,51 @@ import { PANELS } from "../types/panels";
 import { useUnit } from "effector-react";
 import { $idActiveBorder } from "../store/border";
 import { borderTemplates } from "../constants/borderTemplates";
+import NewYear from "../assets/newYear.svg";
+import HappyBirthday from "../assets/happyBirthday.svg";
+import March from "../assets/march.svg";
+import Halloween from "../assets/halloween.svg";
 
 interface SelectedBorderProps {
   id: string;
 }
 
+const templates = [
+  {
+    id: 9,
+    title: "Новый год",
+    url: NewYear,
+    code:[],
+    count: 4
+  },
+  {
+    id: 10,
+    title: "День рождения",
+    url: HappyBirthday,
+    code:[],
+    count: 4
+  },
+  {
+    id: 11,
+    title: "8 Марта",
+    url: March,
+    code:[],
+    count: 4
+  },
+  {id: 12,
+    title: "Хэллоуин",
+    url: Halloween,
+    code:[],
+    count: 4
+  },
+];
+
 const SelectedBorder = ({ id }: SelectedBorderProps) => {
   const idBorder = useUnit($idActiveBorder);
-  const border = borderTemplates.find((el) => el.id === idBorder);
+  let border= borderTemplates.find((el) => el.id === idBorder);
+  if(!border){
+    border = templates.find((el) => el.id === idBorder);
+  }
 
   const [selectedImage, setSelectedImage] = useState(null);
 
