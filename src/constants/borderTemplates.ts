@@ -1,11 +1,11 @@
-import Border1 from "../assets/Border1.svg";
-import Border2 from "../assets/Border2.svg";
-import Border3 from "../assets/Border3.svg";
-import Border4 from "../assets/Border4.svg";
-import Border5 from "../assets/Border5.svg";
-import Border6 from "../assets/Border6.svg";
-import Border7 from "../assets/Border7.svg";
-import Border8 from "../assets/Border8.svg";
+import Border1 from "../assets/Border1.png";
+import Border2 from "../assets/Border2.png";
+import Border3 from "../assets/Border3.png";
+import Border4 from "../assets/Border4.png";
+import Border5 from "../assets/Border5.png";
+import Border6 from "../assets/Border6.png";
+import Border7 from "../assets/Border7.png";
+import Border8 from "../assets/Border8.png";
 
 interface IBorder {  
     id: number;  

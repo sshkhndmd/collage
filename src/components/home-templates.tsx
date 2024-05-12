@@ -1,8 +1,8 @@
 import { AppearanceProvider, Div, Text } from "@vkontakte/vkui";
-import NewYear from "../assets/newYear.svg";
-import HappyBirthday from "../assets/happyBirthday.svg";
-import March from "../assets/march.svg";
-import Halloween from "../assets/halloween.svg";
+import NewYear from "../assets/newYear.png";
+import HappyBirthday from "../assets/happyBirthday.png";
+import March from "../assets/march.png";
+import Halloween from "../assets/halloween.png";
 import { setActivePanel } from "../store/panel";
 import { setIdActiveBorder } from "../store/border";
 import { PANELS } from "../types/panels";
@@ -10,7 +10,7 @@ import { PANELS } from "../types/panels";
 const templates = [
   {
     id: 9,
-    title: "Новый год",
+    title: "Дружба",
     url: NewYear,
   },
   {
@@ -20,11 +20,11 @@ const templates = [
   },
   {
     id: 11,
-    title: "8 Марта",
+    title: "Семья",
     url: March,
   },
   {id: 12,
-    title: "Хэллоуин",
+    title: "Любовь",
     url: Halloween,
   },
 ];
